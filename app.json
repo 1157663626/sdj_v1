@@ -2,7 +2,18 @@
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
-        "pages/home/home"
+        "pages/home/home",
+        "pages/order/list/order_list",
+        "pages/order/detail/order_detail",
+        "pages/contact/add/contact_add",
+        "pages/contact/detail/contact_detail",
+        "pages/center/center",
+        "pages/cargo/publish/cargo_publish",
+        "pages/cargo/list/cargo_list",
+        "pages/cargo/detail/cargo_detail",
+        "pages/trip/publish/trip_publish",
+        "pages/trip/list/trip_list",
+        "pages/trip/detail/trip_detail"
     ],
     "window": {
         "backgroundTextStyle": "light",
