@@ -47,8 +47,28 @@ App({
 	httpsRequest: function (url, params) {
 		wx.request({
 			url: this.globalData.requestUrl + url,
-			data: this.globalData.headerDto + "," + params,
+			data: {'json': "{'reqHeader':{"+ this.globalData.headerDto + "},'reqBodyDto':{" + params + "}}"},
+			method: 'POST',
+			responseType: 'text',
+			header: { "Content-Type": "application/x-www-form-urlencoded" },
+			success: function (data) {
+				// TODO 解析返回参数
+				if (data.resBodyDto == undefined) {
+					// 没有数据返回
+					return null;
+				}
+				// 注册和登录重新缓存登录信息
+				if (url ) {
 
+				}
+				return data.resBodyDto;
+			},
+			fail: function (data) {
+				// 请求失败
+			},
+			complete: function () {
+				// 无论调用成功或失败都会执行
+			}
 		})
 	}
 })
